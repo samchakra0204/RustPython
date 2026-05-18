@@ -118,7 +118,7 @@ class BasicTest(BaseTest):
         fn = self.get_env_file(*args)
         self.assertTrue(os.path.isdir(fn))
 
-    @unittest.expectedFailure  # TODO: RUSTPYTHON
+   @unittest.expectedFailureIfWindows("TODO: RUSTPYTHON")
     def test_defaults_with_str_path(self):
         """
         Test the create function with default arguments and a str path.
